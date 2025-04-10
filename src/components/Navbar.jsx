@@ -3,6 +3,7 @@ import { assets } from "./../assets/assets";
 
 const Navbar = () => {
   const [showMobileMenu, setShowMobileMenu] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
     if (showMobileMenu) {
@@ -15,8 +16,26 @@ const Navbar = () => {
     };
   }, [showMobileMenu]);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 900) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <div className="absolute top-0 left-0 w-full z-10">
+    <div
+      className={`top-0 left-0 w-full z-10 fixed transition-colors duration-300 ${
+        isScrolled ? "bg-[#4C4D58]" : "bg-transparent"
+      }`}
+    >
+      {" "}
       <div className="container mx-auto flex justify-between items-center py-4 px-6 md:px-20 lg:px-32 bg-transparent">
         <img src={assets.logo} alt="" />
         <ul className="hidden md:flex gap-7 text-white">
