@@ -23,7 +23,7 @@ Estate is a modern real estate web application designed to showcase properties, 
 
 1. Clone the repository:
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/roysreejan/ESTATE
    cd estate
 
 2. Install dependencies:
