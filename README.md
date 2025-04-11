@@ -66,6 +66,23 @@ estate/
 - **React Toastify**: Notifications for React.
 - **Web3Forms**: Form submission API.
 
+## Deployment
+
+This project is configured for deployment on [Vercel](https://vercel.com). The `vercel.json` file ensures that all routes are rewritten to `index.html` for a single-page application.
+The live project is available at: `https://vercel.com/sreejan-roys-projects/estate`
+
+To deploy:
+
+1. Install the Vercel CLI:
+
+   ```bash
+   npm install -g vercel
+
+2. Deploy the project:
+
+   ```bash
+   vercel
+
 ## Acknowledgments
 
 - Built with ❤️ using React and TailwindCSS.
