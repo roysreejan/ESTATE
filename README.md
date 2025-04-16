@@ -24,17 +24,27 @@ Estate is a modern real estate web application designed to showcase properties, 
 1. Clone the repository:
    ```bash
    git clone https://github.com/roysreejan/ESTATE
-   cd estate
+   ```
 
-2. Install dependencies:
+2. Navigate to the project directory:
+   ```bash
+   cd estate
+   ```
+
+3. Install dependencies:
    ```bash
    npm install
+   ```
 
-3. Start the development server:
+4. Start the development server:
    ```bash
    npm run dev
+   ```
 
-4. Open the application in your browser at `http://localhost:5173`.
+5. Open the application in your browser at 
+   ```
+   http://localhost:5173
+   ```
 
 ## Scripts
 
@@ -44,19 +54,32 @@ Estate is a modern real estate web application designed to showcase properties, 
 - `npm run lint`: Run ESLint to check for code issues.
 
 ## Folder Structure
+
+```
 estate/
 ├── public/               # Static assets
+│   └── favicon.ico       # Favicon for the application
 ├── src/                  # Source code
 │   ├── assets/           # Images and assets
 │   ├── components/       # React components
+│   │   ├── Header.jsx    # Header component
+│   │   ├── Footer.jsx    # Footer component
+│   │   ├── About.jsx     # About section component
+│   │   ├── Projects.jsx  # Projects section component
+│   │   ├── Testimonials.jsx # Testimonials section component
+│   │   └── ContactForm.jsx  # Contact form component
 │   ├── App.jsx           # Main application component
 │   ├── main.jsx          # Entry point
 │   └── index.css         # Global styles
 ├── .vscode/              # VS Code settings
-├── [package.json](http://_vscodecontentref_/0)          # Project metadata and dependencies
-├── [vite.config.js](http://_vscodecontentref_/1)        # Vite configuration
-├── [eslint.config.js](http://_vscodecontentref_/2)      # ESLint configuration
-└── [README.md](http://_vscodecontentref_/3)             # Project documentation
+│   └── settings.json     # Editor-specific settings
+├── node_modules/         # Installed dependencies
+├── package.json          # Project metadata and dependencies
+├── vite.config.js        # Vite configuration
+├── eslint.config.js      # ESLint configuration
+├── vercel.json           # Vercel deployment configuration
+└── README.md             # Project documentation
+```
 
 ## Dependencies
 
@@ -69,19 +92,19 @@ estate/
 ## Deployment
 
 This project is configured for deployment on [Vercel](https://vercel.com). The `vercel.json` file ensures that all routes are rewritten to `index.html` for a single-page application.
-The live project is available at: `https://vercel.com/sreejan-roys-projects/estate`
+The live project is available at: `https://estate-property.vercel.app/`
 
 To deploy:
 
 1. Install the Vercel CLI:
-
    ```bash
    npm install -g vercel
+   ```
 
 2. Deploy the project:
-
    ```bash
    vercel
+   ```
 
 ## Acknowledgments
 
